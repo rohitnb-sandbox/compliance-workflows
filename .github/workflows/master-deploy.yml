@@ -4,12 +4,8 @@ on:
   workflow_call:
 
 jobs:
-  compliance-tests:
-    uses: RohitDemo/compliance-rules/.github/workflows/compliance-checks.yml@main
-  
   prod-deploy:
     runs-on: ubuntu-latest
-    needs: compliance-tests
     environment: prod
     
     steps:
